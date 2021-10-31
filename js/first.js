@@ -4,3 +4,11 @@
 - A függvény szorozza meg a tömbelemek értékét 1.27-tel, majd pedig 
 __térjen vissza__ az elemek egész számra kerekített összegével!
 */
+
+'use strict';
+
+
+function brutto(numericArray) {
+    return Math.round(numericArray.reduce((a, b) => a + b, 0) * 1.27);    
+}
+

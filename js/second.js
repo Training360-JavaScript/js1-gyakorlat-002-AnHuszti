@@ -15,3 +15,17 @@ hogy a tömb minden eleme number típusú-e vagy sem
 - `someElementsAreNumbers`: Értéke true/false attól függően, 
 hogy a tömbben van-e number típusú elem vagy sem
 */
+
+'use strict';
+
+let data = ['Lili', 32, 566, 'Aliz', true];
+let primitive = 32
+
+function checker (data, primitive) {
+    let itemExist = data.some(item => item == primitive );
+    let itemIndex = data.findIndex(item => item == primitive );
+    let allNumber = data.every(item => typeof item == "number");
+    let someNumber = data.some(item => typeof item == "number");
+    
+    return {exists: itemExist, index: itemIndex, allElementsAreNumbers: allNumber, someElementsAreNumbers: someNumber}
+}
